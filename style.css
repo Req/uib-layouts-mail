@@ -1,0 +1,188 @@
+/* GLOBAL STYLES */
+
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+i {
+  color: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  border-bottom: 1px solid #eee;
+}
+
+.topbar .first {
+  width: 200px;
+  padding: 15px;
+}
+
+.topbar .search {
+  background-color: #f5f5f5;
+  padding: 14px;
+  width: 500px;
+  display: flex;
+}
+
+.topbar .search input::placeholder {
+    padding-left: 15px;
+}
+
+.topbar .search input {
+  border-width: 0;
+  background: transparent;
+}
+
+.topbar .last {
+  margin-left: auto;
+}
+
+.topbar .last .profile {
+  background-color: teal;
+  color: white;
+  /* padding: 10px; */
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* MAIN AREA */
+
+main {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* NAV BAR */
+nav {
+  min-width: 200px;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+nav li {
+  padding: 8px 10px;
+}
+nav li:hover {
+  text-decoration: underline;
+}
+nav li i {
+  padding: 0 10px;
+}
+
+nav li.selected, nav li.selected i {
+    color: red;
+    background: rgb(255, 238, 240);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+nav .compose {
+  border: 0px solid #ccc;
+  border-radius: 30px;
+  padding: 10px 25px;
+  box-shadow: 0 2px 3px #aaa;
+  margin: 10px;
+}
+
+nav .compose:hover {
+    background: #f1f1f1;
+    text-decoration: underline;
+}
+
+/* Mail area */
+
+.mail {
+  padding: 20px;
+}
+
+.mail .mail--controls {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 20px 0;
+  display: flex;
+}
+
+.mail .mail--controls i {
+    margin-right: 10px;
+}
+
+.mail .mail--list--tabs {
+  display: flex;
+}
+
+.mail .tab {
+  width: 160px;
+  border-bottom: 0.3em solid white;
+  padding: 20px 20px 20px 0;
+}
+
+.mail .tab.selected {
+    color: green;
+    border-bottom: 0.3em solid green;
+}
+
+
+.mail .tab.selected i {
+    color: green;
+}
+
+.tab i {
+  margin-right: 10px;
+}
+
+.mail .mail--list .mail--list--listing {
+  /* width: 100%; */
+  border-top: 1px solid #f5f5f5;
+}
+
+.mail .mail--list .mailrow {
+  display: flex;
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 15px;
+}
+
+.mail .mail--list .mailrow:hover {
+    background: #f1f1f1;
+}
+
+
+.mail .mail--list .mailrow > * {
+  flex-basis: 5%;
+  padding: 0.5em 0em 0.5em 0;
+  height: 1.5em;
+}
+
+.mail .mail--list .mailrow .sender {
+  flex-basis: 15%;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.mail .mail--list .mailrow .topic {
+  flex-basis: auto;
+  flex-shrink: 999999;
+  overflow: hidden;
+}
+
+.mail .mail--list .mailrow .time {
+  flex-basis: 10%;
+  text-align: right;
+}
